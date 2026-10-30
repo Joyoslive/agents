@@ -2,7 +2,7 @@
 
 Use blank lines to make the logical structure of code visible.
 
-- Keep statements that contribute to the same immediate purpose together.
+- Keep statements that establish one usable value together, including its initialization and immediate validation. When immediate validation is needed, separate that group from preceding initializations of other values.
 - Separate distinct steps or changes in intent with a blank line, such as preparation, execution, and handling the result.
 - Use blank lines after multiline statements to make statement boundaries clear.
 - Keep short expressions and flat records compact; expand them when their contents are easier to read separately.
