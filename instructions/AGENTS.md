@@ -20,7 +20,7 @@ When you identify a better option, recommend it.
 
 ## Supporting context
 
-- Before proposing or implementing code changes, read [code-philosophy.md](./context/code-philosophy.md).
-- Before writing or modifying code, or proposing changes to code style, read [code-style.md](./context/code-style.md).
-- Before proposing or changing tests, read [testing.md](./context/testing.md).
-- After each implementation step, follow [reporting.md](./context/reporting.md).
+- Before proposing or implementing code changes, read [code-philosophy.md]($CODEX_HOME/context/code-philosophy.md).
+- Before writing or modifying code, or proposing changes to code style, read [code-style.md]($CODEX_HOME/context/code-style.md).
+- Before proposing or changing tests, read [testing.md]($CODEX_HOME/context/testing.md).
+- After each implementation step, follow [reporting.md]($CODEX_HOME/context/reporting.md).
