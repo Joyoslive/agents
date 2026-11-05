@@ -1,9 +1,9 @@
 ---
-name: write-for-agents
+name: etch
 description: Write or edit agent-facing prompts, skills, instructions, and requirements.
 ---
 
-# Write for agents
+# Etch
 
 Write for a fresh agent with access to the document and relevant context, without assuming it saw previous deliberation. Consider what it might reasonably infer. State the intended outcome and make requirements, constraints, and conditions explicit where needed to prevent misunderstandings.
 

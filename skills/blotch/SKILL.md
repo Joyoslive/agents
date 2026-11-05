@@ -1,9 +1,9 @@
 ---
-name: write-for-humans
+name: blotch
 description: Write or edit human-facing prose in documents, reports, messages, issue descriptions, and instructions.
 ---
 
-# Write for humans
+# Blotch
 
 Keep writing as short as the reader's needs allow. Put the point first when useful, and remove filler, repetition, and unnecessary context. Use short paragraphs and break up longer text where it helps readers scan.
 
