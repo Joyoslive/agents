@@ -5,8 +5,8 @@ description: Write or edit human-facing prose in documents, reports, messages, i
 
 # Blotch
 
-Keep writing as short as the reader's needs allow. Put the point first when useful, and remove filler, repetition, and unnecessary context. Use short paragraphs and break up longer text where it helps readers scan.
+Unnecessary words obscure what matters. Keep writing as short as the reader's needs allow. Cut filler, repetition, unnecessary context, and what a competent reader can reasonably infer.
 
-Assume common sense and ordinary real-world knowledge. Leave out what readers can reasonably infer, but include unfamiliar domain context and details needed to understand or act.
+Assume common sense and ordinary real-world knowledge, but include unfamiliar domain context and details needed to understand or act.
 
-Preserve the requested meaning, voice, and format.
+Put the point first when useful. Use short paragraphs and break up longer text where it helps readers scan. Preserve the requested meaning, voice, and format.

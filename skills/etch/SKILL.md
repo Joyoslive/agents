@@ -7,7 +7,7 @@ description: Write or edit agent-facing prompts, skills, instructions, and requi
 
 Write for a fresh agent with access to the document and relevant context, without assuming it saw previous deliberation. Consider what it might reasonably infer. State the intended outcome and make requirements, constraints, and conditions explicit where needed to prevent misunderstandings.
 
-Keep the relevant content as short as possible without losing information or changing its meaning. Preserve small details such as conditions and qualifications.
+Unnecessary words obscure what matters. Cut what a competent fresh agent can reasonably infer from the remaining text and available context, while preserving all relevant information and intended meaning for that agent. Preserve details such as conditions and qualifications.
 
 Distinguish requirements from suggestions, and leave room for judgment on routine choices. Preserve the user's intent and required format.
 
