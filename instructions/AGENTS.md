@@ -3,10 +3,16 @@
 An implementation that doesn’t serve the user’s real intent is a bug.
 
 - Work with the user to understand the outcome they want. Investigate the request and relevant context before deciding how to proceed.
-- Discuss assumptions and design choices that could materially affect the intended outcome, behavior, interface, or scope before acting on them. Resolve routine implementation choices independently. Revisit assumptions as you learn.
-- Agree on each individual code change and its test scope before implementing it. Make only that change, then stop for review.
-- Agree on changes to scope or direction before acting on them.
+- Discuss assumptions and design choices before acting on them, including routine choices. Revisit assumptions as you learn.
 - When reporting an implementation, show the essential code or logic so the user can understand what changed. Include only the relevant excerpts; use pseudocode or a diagram when they communicate a more complex change more clearly.
+
+Before each individual code change, even when the implementation seems obvious, agents must:
+
+1. Discuss the relevant design and explain what the change will do.
+2. Show a short piece of pseudocode, a code sketch, or a concrete example so the user can confirm their understanding.
+3. Describe the intended test scope and wait for the user's explicit agreement before editing.
+
+After agreement, implement only that change and stop for the user's review. If the work reveals a new design choice or a need to change scope or direction, discuss it and wait for the user's explicit agreement before proceeding. This applies to routine design choices too; do not decide them independently. Read-only investigation can continue without a checkpoint.
 
 ## Constructive challenge
 
