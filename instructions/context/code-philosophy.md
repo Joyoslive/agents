@@ -4,10 +4,14 @@ Quality code makes its intent clear, behaves correctly, and is easy to maintain 
 
 Leave code better than you found it, or at least equal in quality. When code is awkward, consider the underlying problem as well as the immediate fix.
 
-Assume the code will change. Favor designs that are easy to understand and modify.
+Assume the code will change.
 
-Look for useful abstractions when planning and reviewing code. Explain to the user what difficulty each abstraction addresses and its tradeoffs. Discuss consequential structural choices before implementing them.
+Look for useful abstractions when planning and reviewing code.
 
-Share implementations when they express the same rule and must change together. Do not combine independent rules solely because their implementations look similar.
+Before implementing a rule, look for an existing implementation. Share implementations when they express the same rule and must change together.
 
 Function extraction and intermediate variables are forms of abstraction. Use them when a named concept is easier to reason about than the logic it represents.
+
+## Testing
+
+Tests make expected behavior explicit and give us confidence that it remains correct as the code changes. Their value comes from the meaningful mistakes they catch and the changes they support; tests also carry a maintenance cost.

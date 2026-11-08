@@ -1,11 +1,12 @@
 # Code style
 
-Use blank lines to make the logical structure of code visible.
+Use blank lines to make the logical structure of code visible. Apply these rules in priority order:
 
-- Keep statements that establish one usable value together, including its initialization and immediate validation. When immediate validation is needed, separate that group from preceding initializations of other values.
-- Separate distinct steps or changes in intent with a blank line, such as preparation, execution, and handling the result.
-- Use blank lines after multiline statements to make statement boundaries clear.
-- Keep short expressions and flat records compact; expand them when their contents are easier to read separately.
+1. Add a blank line after multiline statements.
+2. Keep initialization and immediate validation together.
+3. Separate distinct steps with a blank line.
+
+Keep short expressions and flat records compact; expand them when their contents are easier to read separately.
 
 ## Variables
 
@@ -13,11 +14,9 @@ Keep variables close to where they are used.
 
 Prefer named intermediate variables over multiline conditions when they clarify the condition.
 
-Prefer named intermediate variables over multiline iterable expressions when they clarify what a loop iterates over.
+Use `!` with identifiers, direct property access, or short compound conditions. For more complex conditions, prefer a named condition that makes the negation clear.
 
-Use `!` with identifiers or direct property access. For compound conditions, prefer a named condition when its name makes the meaning clear.
-
-Iterate directly over identifiers or property access. For transformed collections, prefer a named variable when its name makes the collection's meaning clear.
+Iterate directly over identifiers or property access. Name transformed collections and multiline iterable expressions before iterating.
 
 ## Function placement
 
