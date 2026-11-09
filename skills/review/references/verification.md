@@ -4,7 +4,7 @@
 
 For each stage, collect and deduplicate the reviewers' suspicions without losing distinct concerns. Assign each suspicion, or a small batch of related suspicions in the same block and stage, to a fresh verifier. Give the verifier the relevant intent, constraints, project instructions, assigned surface, and the specific claim and evidence to examine. Do not provide an expected verdict or the first reviewer's broader conclusions.
 
-Give the verifier only the briefing below, not these lead instructions. Reconcile the results and record supported and unresolved findings, including their uncertainty. Discard a suspicion only when its basis is actually refuted; a verifier's disagreement or inability to prove a defect alone is not a refutation. Finish all review and verification assignments for the step before deciding whether its block may advance.
+Give the verifier only the briefing below, not these lead instructions. Reconcile the results and record every distinct concern, including its verification outcome and uncertainty. Keep refuted concerns with the evidence that resolves them; a verifier's disagreement or inability to prove a defect alone is not a refutation. If verification cannot be completed, record the concern as unverified. Finish all review and verification assignments for the step before deciding whether its block may advance.
 
 ## Verifier briefing
 

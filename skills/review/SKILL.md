@@ -5,11 +5,11 @@ description: Review a requested software surface through independent, progressiv
 
 # Review
 
-Review the surface the user requests. Default to `full`; use `polish` when the user explicitly requests a polish-only review. A review is read-only: do not modify the reviewed work or other files. The lead writes the requested report as the sole file change.
+Review the surface the user requests. Default to `full`; use `polish` when the user explicitly requests a polish-only review. A review is read-only: do not modify the reviewed work or other files. The lead writes the two reports as the only file changes.
 
 ## Start with checks
 
-Read [checks.md](references/checks.md) and run all applicable lint and formatting checks over the requested surface before either mode. Complete the entire checks step, even if a check fails. If any check fails or an applicable check cannot be completed safely, report the results and stop. Do not start review agents. If no check is configured for a category, record that fact rather than inventing one.
+Read [checks.md](references/checks.md) and run all applicable lint and formatting checks over the requested surface before either mode. Complete the entire checks step, even if a check fails. If any check fails or an applicable check cannot be completed safely, do not start review agents; write the reports and stop. If no check is configured for a category, record that fact rather than inventing one.
 
 ## Full review
 
@@ -20,7 +20,7 @@ Read [checks.md](references/checks.md) and run all applicable lint and formattin
    - Interface and naming: [interface-and-naming.md](references/interface-and-naming.md).
    - Polish: [polish.md](references/polish.md).
 3. Give each stage's reviewers its guidance, the confirmed intent, relevant constraints, and their assigned surface. Assign at least one reviewer to each block at each stage. For polish, divide the block into non-overlapping file groups.
-4. Verify the stage's suspicions as described in [verification.md](references/verification.md). Complete all review and verification assignments for the stage before deciding the block's next step. A supported or unresolved finding stops that block between stages until resolved; record its remaining stages as deferred. Discard a suspicion only when its basis is actually refuted.
+4. Verify the stage's suspicions as described in [verification.md](references/verification.md). Complete all review and verification assignments for the stage before deciding the block's next step. A supported or unresolved finding stops that block between stages until resolved; record its remaining stages as deferred. A refuted finding does not block the next stage, but remains in the reports.
 
 Blocks run as independent tracks: a block can advance as soon as its own stage completes and passes, without waiting for another block. A blocked or incomplete block does not stop an independent block. Wait for every track to finish or stop before writing the combined report. If a stage cannot be completed, record the limitation and stop that block between stages; do not treat incomplete work as a pass.
 
@@ -40,11 +40,20 @@ Review and verification agents inherit the lead's model and reasoning settings b
 
 ## Report
 
-Write one report to the user's requested path, or to `review-report.md` in the working directory. If the default path exists, choose a non-conflicting name; do not overwrite it. Include:
+Write two linked reports based on the same review results, including when checks prevent review stages from running. Include every distinct concern reported by reviewers, regardless of its perceived importance or verification outcome; merge duplicates without losing distinct concerns. If verification is incomplete, identify the concern as unverified rather than omitting it.
+
+Write:
+
+- An agent-facing detailed report, following [Etch](../etch/SKILL.md), at the user's requested path or `review-report.md` in the working directory.
+- A human-facing summary, following [Blotch](../blotch/SKILL.md), beside the detailed report with `-summary` added before its extension, such as `review-report-summary.md`. If the detailed report has no extension, append `-summary`.
+
+Do not overwrite an existing summary; choose a non-conflicting name for it. If the default detailed report path or its summary path exists, choose a non-conflicting pair of names. Include in the detailed report:
 
 - The requested scope and mode, check commands and outcomes, and any checks that were unavailable or not applicable.
-- For `full`, the confirmed intent, block boundaries, and the basis for their independence when established.
-- Findings grouped by block or file group and stage, with relevant locations, evidence, reasoning, uncertainty, and useful alternatives or tradeoffs when available. Distinguish demonstrated defects from supported concerns and unresolved questions.
+- For `full`, the confirmed intent, block boundaries, and the basis for their independence, where established.
+- Findings grouped by block or file group and stage, with relevant locations, evidence, reasoning, verification outcome, uncertainty, and useful alternatives or tradeoffs when available. Distinguish demonstrated defects from supported concerns, unresolved questions, refuted claims, and unverified concerns. Include the evidence that refutes a claim.
 - Each track's completed, blocked, deferred, or incomplete stages, including why further work stopped. For a check failure, explicitly state that review stages did not run.
 
-Return the report path and a short summary in chat. Do not imply that skipped or incomplete stages passed.
+In the human summary, give each distinct finding and its significance at a glance, with useful locations and any failed checks, uncertainty, and blocked, deferred, or incomplete review work. Preserve the distinctions between verification outcomes and link to the detailed evidence. Link each report to the other.
+
+Return both report paths and a short summary in chat. Do not imply that skipped or incomplete stages passed.
