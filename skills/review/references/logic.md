@@ -1,4 +1,4 @@
-# Intent-alignment review
+# Logic review
 
 Examine the assigned surface against the confirmed programmer intent and relevant constraints. Trace important behavior through its real entry points, implementation, interactions, and existing tests or other evidence. Look for mismatches, missing behavior, incorrect assumptions, boundary and failure cases, and security or integration concerns relevant to the intended outcome.
 
