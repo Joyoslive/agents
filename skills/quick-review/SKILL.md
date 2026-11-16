@@ -1,11 +1,11 @@
 ---
 name: quick-review
-description: Review a requested software surface in one pass with a single agent and write reports.
+description: Review a requested software surface in one pass with a single agent.
 ---
 
 # Quick review
 
-Review the requested surface yourself; do not delegate. Do not modify the reviewed work; the two reports are the only file changes.
+Review the requested surface yourself; do not delegate. Do not modify the reviewed work.
 
 Run all applicable lint and formatting checks in check-only mode, without installing tools or changing configuration. Record each command, its scope and result, and any unavailable or inapplicable checks. Continue the review even if a check fails or cannot run.
 
@@ -18,6 +18,4 @@ Use the available context to understand the intended behavior and constraints. R
 
 Check each concern against the relevant evidence, counterexamples, and plausible explanations. Classify it as supported, refuted, unresolved, or unverified; retain refuted concerns and the evidence that resolves them. Do not present your assessment as independent verification. Continue reviewing despite findings or uncertainty, and report any work you could not complete.
 
-Write two linked reports based on the same results, including every distinct concern. Write an agent-facing detailed report following [Etch](../etch/SKILL.md) to the user's requested path or `review-report.md`, and a human-facing summary following [Blotch](../blotch/SKILL.md) beside it with `-summary` before the extension, or appended if there is no extension. Do not overwrite an existing summary. If either default path exists, choose a non-conflicting pair.
-
-The detailed report includes scope, known intent and uncertainty, checks and outcomes, findings with locations, evidence, reasoning and assessment, and incomplete work. The summary gives each concern and its significance at a glance, useful locations, failed checks, uncertainty, and incomplete work. Link the reports to each other and return both paths with a short summary.
+Report all findings in chat.
